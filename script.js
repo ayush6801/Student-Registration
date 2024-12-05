@@ -37,8 +37,8 @@ function addtoLocalstorage()
                 const rowData = {
                     name: row.cells[0].textContent,
                     id: row.cells[1].textContent,
-                    class: row.cells[2].textContent,
-                    roll: row.cells[3].textContent,
+                    email: row.cells[2].textContent,
+                    number: row.cells[3].textContent,
                 };
                 tableData.push(rowData);
             });
@@ -57,8 +57,8 @@ function loadDataFromLocalStorage() {
             newRow.innerHTML = `
                 <td class="border border-gray-300 px-4 py-2">${data.name}</td>
                 <td class="border border-gray-300 px-4 py-2">${data.id}</td>
-                <td class="border border-gray-300 px-4 py-2">${data.class}</td>
-                <td class="border border-gray-300 px-4 py-2">${data.roll}</td>
+                <td class="border border-gray-300 px-4 py-2">${data.email}</td>
+                <td class="border border-gray-300 px-4 py-2">${data.number}</td>
                 <td class="border border-gray-300 px-4 py-2">
                     <button onclick="editRow(this)" class="edit">Edit</button>
                     <button onclick="deleteRow(this)" class="delete">Delete</button>
