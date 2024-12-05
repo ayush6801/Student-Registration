@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="icon" href="https://as2.ftcdn.net/v2/jpg/09/12/49/61/1000_F_912496138_Qw6BusNux97cXAq07N2r3mGg4kUbhGG2.webp" type="image/x-icon">
+    <style>
+        .edit
+        {
+            background-color: #007BFF;
+            border: 2px solid;
+            border-radius: 10px;
+            color: white;
+            padding: 5px;
+            
+        }
+        .edit
+        {
+            background-color: #007BFF;
+            border: 2px solid;
+            border-radius: 10px;
+            color: white;
+            padding: 5px;
+            
+        }
+        .delete
+        {
+            background-color: red;
+            border: 2px solid;
+            border-radius: 10px;
+            color: white;
+            padding: 5px;
+            
+        }
+        body {
+            background-image: url('./image/background.jpg');
+            
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="text-center mt-5">
+        <h1 class="font-extrabold text-7xl">Student Registration Page</h1>
+    </div>
+    <div class="flex flex-col justify-center items-center mt-5">
+        <form id="studentform" class="flex-col justify-center items-center">
+            <label> Student Name:</label>
+            <br>
+            <input type="text" id="sname"class="border border-black rounded-md " >
+            <br>
+            <label> Student Id:</label>
+            <br>
+            <input type="text" id="sid" class="border border-black rounded-md">
+            <br>
+            <label> Email: </label>
+            <br>
+            <input type="email" id="semail"class="border border-black rounded-md">
+            <br>
+            <label> Contact Number:</label>
+            <br>
+            <input type="text" id="cnumber"class="border border-black rounded-md">
+            <br>
+            <button type="button" onclick="addStudent()"  class="border border-white rounded-md mt-3 ml-10 p-2 bg-blue-400 hover:bg-blue-300 text-gray-100"> submit</button>
+        </form>
+        <div class="w-3/4 max-w-4xl m-5">
+            <div class="overflow-y-auto max-h-60 border border-gray-300 rounded-lg shadow-md">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="border border-gray-300 px-4 py-2">Student Name</th>
+                            <th class="border border-gray-300 px-4 py-2">Student ID</th>
+                            <th class="border border-gray-300 px-4 py-2">Email</th>
+                            <th class="border border-gray-300 px-4 py-2">Contact Number</th>
+                            <th class="border border-gray-300 px-4 py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody" class="divide-y divide-gray-200">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
